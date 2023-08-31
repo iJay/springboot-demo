@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class BookController {
 
     // 使用@Value读取单个数据
-    @Value("${server.port}")
-    private int port;
+//    @Value("${server.port}")
+//    private int port;
 
     @Value("${lesson}")
     private String lesson;
@@ -27,7 +27,7 @@ public class BookController {
 
     @GetMapping("/{id}")
     public String hello(@PathVariable("id") Long id) {
-        System.out.println("port ==> " + port);
+        //System.out.println("port ==> " + port);
         System.out.println("lesson ==> " + lesson);
         System.out.println("subject_01 ==> " + subject_01[0]);
         System.out.println("env.enterprise.name ==> " + env.getProperty("enterprise.name"));

@@ -1,0 +1,13 @@
+server:
+  port: 8082
+lesson: SpringBoot
+
+
+enterprise:
+  name: leohan
+  age: 16
+  tel: 4001685000
+  subjects:
+    - java
+    - python
+    - c++

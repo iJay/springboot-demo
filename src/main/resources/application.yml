@@ -1,8 +1,8 @@
-server:
-  port: 8082
-lesson: SpringBoot
-
-
+# 选择开发环境的配置文件
+spring:
+  profiles:
+    active: test
+lesson: SpringBootDemo
 enterprise:
   name: leohan
   age: 16
@@ -11,3 +11,27 @@ enterprise:
     - java
     - python
     - c++
+---
+# 开发环境的配置文件
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8080
+---
+# 正式环境的配置文件
+spring:
+  config:
+    activate:
+      on-profile: prod
+server:
+  port: 8081
+---
+# 测试环境的配置文件
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 8082
